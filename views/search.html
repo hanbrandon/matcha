@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/search.css" />
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+        integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+    <script src="../javascript/search.js"></script>
+</head>
+
+<div id="searchBar" class="searchbar wrap">
+    <div class="wrap">
+        <div class="search">
+            <input type="text" id="tags" class="searchTerm" placeholder="What are you looking for?">
+        </div>
+        <div class="tag_list">
+            <input id="count_tag" type=hidden>
+            <input id="hidden_tags" name="interests" type=hidden>
+        </div>
+        <div class="filter">
+            <select name="gender" id="gender">
+                <option selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="bisexual">Bisexual</option>
+                <option value="all">Display All</option>
+            </select>
+            <select name="ageGap" id="ageGap">
+                <option selected disabled>Select Age Gap</option>
+                <option value="1">+-1</option>
+                <option value="2">+-2</option>
+                <option value="3">+-3</option>
+                <option value="4">+-4</option>
+                <option value="5">+-5</option>
+                <option value="7">+-7</option>
+                <option value="10">+-10</option>
+                <option value="0">Display All</option>
+            </select>
+            <select name="fameRating" id="fameRating">
+                <option selected disabled>Select Fame Rating</option>
+                <option value="50">50% ↑</option>
+                <option value="60">60% ↑</option>
+                <option value="70">70% ↑</option>
+                <option value="80">80% ↑</option>
+                <option value="0">Display All</option>
+            </select>
+            <select name="distance" id="distance">
+                <option selected disabled>Select Distance</option>
+                <option value="5">Less than 5 miles</option>
+                <option value="30">Less than 30 miles</option>
+                <option value="100">Less than 100 miles</option>
+                <option value="0">Display All</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div class="container">
+        <a onclick="openSearch()" id="open_search">
+            <div class="search_ico"><i class="fas fa-search"></i></div>
+        </a>
+    </div>
+</div>
+
+</html>

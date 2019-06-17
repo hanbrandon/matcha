@@ -1,0 +1,299 @@
+.chat {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #ff1595;
+	color: white;
+	background-image: linear-gradient(to right, #f50057, #ff6d00);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	cursor: pointer;
+}
+
+.chat .fa-envelope {
+	position: absolute;
+	right: 18px;
+	bottom: 18px;
+}
+
+.sidebar {
+	height: 100%;
+	/* 100% Full-height */
+	width: 100%;
+	/* 0 width - change this with JavaScript */
+	/* Stay in place */
+	
+	/* Stay on top */
+	top: 0;
+	left: 100%;
+	background-color: white;
+	/* Black*/
+	overflow-x: hidden;
+	/* Place content 60px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidebar */
+}
+#sideChat {
+	position:fixed;
+	z-index: 100000!important;
+}
+/* The sidebar links */
+.sidebar a {
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 0.5s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+	.sidebar {
+		padding-top: 15px;
+	}
+
+	.sidebar a {
+		font-size: 18px;
+	}
+}
+
+.orange {
+	border: 2px solid #ff6d00;
+	border-left: 10px solid #ff6d00;
+
+}
+
+.red {
+	border: 2px solid #f50057;
+	border-left: 10px solid #f50057;
+
+}
+
+.x_btn {
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-image: linear-gradient(to right, #f50057, #ff6d00);
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.x_btn .fa-times:before {
+	position: absolute;
+	right:17px;
+	bottom:12px;
+}
+.chat_list {
+	position: relative;
+	margin: 5px;
+	height: 50px;
+}
+
+.chat_room {
+	height: 300px;
+}
+
+.chat_date {
+	position: fixed;
+	right: 12px;
+}
+
+.enter_chat {
+	position: relative;
+	top: 196px;
+	height: 100px;
+	background-color: gray;
+}
+
+.chat_profile {
+	position: absolute;
+	left: 7px;
+	top: 3px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.chat_username {
+	position: absolute;
+	left: 50px;
+}
+
+.chat_username h5 {
+	margin-top: 5px;
+	width: 250px !important;
+}
+
+.recent_chat {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 250px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.single_line_preview {
+	width: 250px;
+	overflow: ellipsis;
+}
+
+/**/
+.mesgs {
+	float: left;
+	padding: 5px 5px 0 7px;
+	width: 100%;
+}
+
+.msg_history {
+	height: 240px;
+
+	overflow-y: auto;
+
+}
+
+.incoming_msg_img {
+	display: inline-block;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+
+
+.received_msg {
+	display: inline-block;
+	padding: 0 0 0 10px;
+	vertical-align: top;
+	word-wrap: break-word;
+	width: 92%;
+}
+
+.sent_msg p {
+	background: #ff6d00 none repeat scroll 0 0;
+	border-radius: 3px;
+	font-size: 14px;
+	margin: 0;
+	color: #fff;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.outgoing_msg {
+	overflow: hidden;
+	margin: 0px 5px 10px 0;
+}
+
+.sent_msg {
+	float: right;
+	width: calc(92% - 50px);
+}
+
+
+.input_msg_write input {
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+	border: medium none;
+	color: #4c4c4c;
+	font-size: 15px;
+	min-height: 48px;
+	width: 100%;
+}
+
+.type_msg {
+	border-top: 1px solid #c4c4c4;
+	position: absolute;
+	bottom: 0;
+	width: 95%;
+}
+
+.msg_send_btn {
+	background: #ff6d00 none repeat scroll 0 0;
+	border: medium none;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 17px;
+	height: 40px;
+	position: absolute;
+	right: 1px;
+	top: 0px;
+	width: 40px;
+}
+
+.received_msg {
+	display: inline-block;
+	padding: 0 0 0 50px;
+	vertical-align: top;
+	width: 92%;
+}
+
+.received_withd_msg p {
+	background: #ebebeb none repeat scroll 0 0;
+	border-radius: 3px;
+	color: #646464;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+	margin-top: -40px;
+}
+
+.received_withd_msg {
+    margin: 0px 5px 10px 0;
+}
+
+.time_date {
+	color: #747474;
+	display: block;
+	font-size: 12px;
+	margin: 8px 0 0;
+}
+
+textarea {
+	width: calc(100% - 40px);
+	height: 40px;
+	resize: none;
+	border: 1px solid #ff6d00;
+	border-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.write_msg:focus {
+	border: 1px solid #ff6d00;
+	box-shadow: 0 0 0 0.2rem rgba(186, 104, 200, .25);
+}
+

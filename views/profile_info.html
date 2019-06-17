@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="../css/profile_info.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="../javascript/profile_info.js"></script>
+	<script src="../javascript/index_card.js"></script>
+	<script>
+		var profile_id = '<%= id %>';
+		var profile_name = '<%= username %>';
+		var curr_user = '<%= logged_user %>';
+		var curr_user_id =  '<%= logged_user_id %>';
+	</script>
+</head>
+
+<body>
+	<% include nav.html %>
+	<div class="container profile">
+		<div class="row">
+			<div class="full">
+				<img onclick="popup(0)" id="profile_pic_0" src="<%= img[0] %>">
+				<div onclick="popup_close(0)" id="profile_popup_0" class="modal">
+					<!-- The Close Button -->
+					<span onclick="popup_close(0)" class="popup_close">&times;</span>
+					<!-- Modal Content (The Image) -->
+					<img class="modal-content" id="img0">
+					<!-- Modal Caption (Image Text) -->
+				</div>
+				<div class="dislike" id="like_user_<%= id %>" onclick="like_dislike('<%= logged_user %>', <%= id %>, 0)"><i	class="fas fa-times"></i></div>
+				<div class="report" id="report_user_<%= id %>" onclick="report_open()"><i class="fas fa-exclamation-circle"></i></div>
+				<!-- REPORT OR BLOCK POPUP -->
+				<div onclick="report_close(0)" id="report_popup" class="report_popup">
+						<!-- The Close Button -->
+						<span onclick="report_close(0)" class="popup_close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<div class="report-content">
+							<button onclick="block(<%= id %>, `<%= logged_user_id %>`)" >Block</button><button onclick="report(<%= id %>, `<%= logged_user %>`)" >Report</button>
+						</div>
+						<!-- Modal Caption (Image Text) -->
+					</div>
+				<div class="like" id="like_user_<%= id %>" onclick="like_dislike('<%= logged_user %>', <%= id %>, 1)"><i class="fas fa-heart"></i></div>
+				<% 
+				var i = 1;
+				while (img[i])
+				{%>
+				<div class="thumbnail">
+					<img onclick="popup(<%= i%>)" id="profile_pic_<%= i%>" src="<%= img[i]%>">
+					<div onclick="popup_close(<%= i%>)" id="profile_popup_<%= i%>" class="modal">
+						<!-- The Close Button -->
+						<span onclick="popup_close(<%= i%>)" class="popup_close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="img<%= i%>">
+						<!-- Modal Caption (Image Text) -->
+					</div>
+				</div>
+				<%i++;} %>
+			</div>
+			<div class="desc">
+				<div class="form-group fullName">
+					<h3><%= fullName %></h3><%
+					if (online == 1) { %>
+					<span id="green"> ● </span><span id="login">Online</span>
+					<%} else {%>
+					<span id="gray"> ● </span><span id="login">Last Login: <%= visit %></span>
+					<%}%>
+				</div>
+				<div class="form-group">
+					<label>Fame Rating:&nbsp;</label><span><%= rating %></span>
+				</div>
+				<div class="form-group">
+					<label>Age:&nbsp;</label><span><%= age %></span>
+				</div>
+				<div class="form-group">
+					<label>Gender:&nbsp;</label><span><%= gender %></span>
+				</div>
+				<div class="form-group">
+					<label>Date of Birth:&nbsp;</label><span><%= bday %></span>
+				</div>
+				<div class="form-group">
+					<label>Occupation:&nbsp;</label><span><%= occupation %></span>
+				</div>
+				<div class="form-group">
+					<label>School:&nbsp;</label><span><%= school %></span>
+				</div>
+				<div class="form-group">
+					<label>Sexual Preferences:&nbsp;</label><span><%= sexual_preferences %></span>
+				</div>
+				<div class="form-group">
+					<label for="interests">Interests</label>
+					<div class="interests">
+						<% if (tagarr) {for(var i=1; i < tagarr.length + 1; i++) { %>
+						<span id="spantag<%= i %>" data-id="<%= i %>"><%= tagarr[i - 1] %></span>
+						<% }} %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css/create.css" />
+</head>
+
+<body>
+    <% include nav.html %>
+    <div class="container">
+        <div class="register_form">
+            <form action="/create" method="post">
+                <h1>Register</h1>
+                <input class="reg_inp" name="username" placeholder="Username" required type="text" value="<% if (username) { %><%= username %><% } %>">
+                <input class="reg_inp" name="passwd" placeholder="Password" required type="password">
+                <input class="reg_inp" name="passwd_conf" placeholder="Re-Enter Password" required type="password">
+                <input class="reg_inp" name="email" placeholder="Email" required type="email" value="<% if (email) { %><%= email %><% } %>">
+                <input class="register_btn" name="submit" type="submit" value="OK">
+                <% if(error) { %>
+                    <span><%= error %></span>
+                <% } %>
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

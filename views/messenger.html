@@ -1,0 +1,22 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/messenger.css" />
+	<script>
+		var curr_user = '<%= logged_user %>';
+		var curr_user_id = '<%= logged_user_id %>';
+	</script>
+</head>
+<div id="main">
+	<div id="sideChat" class="sidebar">
+		<div class="close_btn">				
+			<a href="javascript:void(0)" onclick="closeNav()">
+				<div class="x_btn"><i class="fas fa-times"></i></div>
+			</a>
+		</div>
+		
+	</div>
+	<div class="chat_container">
+		<a onclick="openNav()" id="open_chat">
+			<div class="chat"><i class="fas fa-envelope"></i></div>
+		</a>
+	</div>
+</div>

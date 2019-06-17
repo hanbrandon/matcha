@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+</head>
+<body>
+    <% include nav.html %>
+    <div class="container">
+        <div class="login_form">
+            <form action="/resetpw" method="post">
+                <div class="login_field">
+                    <h1>Reset Password</h1>
+                    <input class="log_inp" name="new_password" placeholder="Enter new password" required type="password">
+                    <input class="log_inp" name="verify_password" placeholder="Re-enter new password" required type="password">
+                    <input name="email" type="hidden" value="<%= email %>">
+                    <input name="token" type="hidden" value="<%= token %>">
+                    <input class="login_btn" name="submit" type="submit" value="RESET">
+                    <% if(error) { %>
+                        <span><%= error %></span>
+                    <% } %>
+                    <p><a href="/create">Register</a> | <a href="/login">Go back to login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+body {
+	background-color: #e6e6e6;
+}
+
+/*register*/
+
+.register_form {
+	text-align: center;
+	background-color: white;
+	border: 1px solid #e6e6e6;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: -60px;
+	width: 400px;
+	height: auto;
+	padding: 24px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reg_inp {
+	height: 36px;
+	width: calc(100% - 2px);
+	border-radius: 5px;
+	border: 1px solid #e6e6e6;
+	text-indent: 10px;
+	margin-top: 10px !important;
+}
+
+.register_btn {
+	height: 30px;
+	width: 100%;
+	border-radius: 5px;
+	color: white;
+	background-image: linear-gradient(to right, #f50057, #ff6d00);
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+	cursor: pointer;
+}
+
+.register_form span,
+.login_field span,
+.form-check span,
+.confirm_form span {
+	color: red;
+}

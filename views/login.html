@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+</head>
+<% if(success) { %>
+    <script>
+        alert('<%= success %>');
+    </script>
+<% } %>
+<body>
+    <% include nav.html %>
+    <div class="container">
+        <div class="login_form">
+            <form action="/login" method="post">
+                <div class="login_field">
+                    <h1>Login</h1>
+                    <input class="log_inp" name="username" placeholder="Username" required type="text">
+                    <input class="log_inp" name="passwd" placeholder="Password" required type="password">
+                    <input class="login_btn" name="submit" type="submit" value="LOGIN">
+                    <% if(error) { %>
+                        <span><%= error %></span>
+                    <% } %>
+                    <p><a href="/create">Register</a> | <a href="/forgotpw">Forgot password?</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

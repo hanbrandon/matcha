@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+	<title><%= title %></title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<script>
+		var curr_user = '<%= logged_user %>';
+		var curr_user_id = '<%= logged_user_id %>';
+		var curr_user_dob = '<%= logged_user_dob %>';
+	</script>
+</head>
+
+<body>
+	
+	<% include nav.html %>
+	<% if (logged_user) { %>
+		<% include search.html %>
+	<% } %>
+	<script type="text/javascript" src="/javascript/index_card.js"></script>
+	
+	<div class="container index_list"></div>
+
+	<footer>
+	</footer>
+</body>
+
+</html>

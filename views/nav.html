@@ -1,0 +1,48 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/nav.css">
+	<script	src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="/javascript/socketio.js"></script>
+	<script type="text/javascript" src="/javascript/messenger.js"></script>
+	<script type="text/javascript" src="/javascript/nav.js"></script>
+	<script>
+		var curr_user = '<%= logged_user %>';
+    	var curr_user_id = '<%= logged_user_id %>';
+	</script>
+</head>
+<nav>
+	<ul>
+		<div class="logo">
+			<li>
+				<a href="/">Matcha</a>
+			</li>
+		</div>
+		<% if (logged_user) { %>
+		<div class="right_nav">
+			<li><a href="/profile_pic"><i class="fas fa-images"></i></a></li>
+			<li><a id="noti_check" onclick="show_notification()"><i class="fas fa-bell"></i><div id="notification_counter" style="display: none"></div></a></li>
+			<li><a href="/edit_profile"><i class="fas fa-user"></i></a></li>
+			<li><a href="/logout"><span class="glyphicon glyphicon-log-out"></a></li>
+		</div>
+		<div id="noti_box" style="display:none">
+			<div class="triangle"></div>
+			<div class="notifications_list">
+			</div>
+		</div>
+		<% } else { %>
+		<div class="right_nav">
+			<li><a href="/login"><span class="glyphicon glyphicon-log-in"></a></li>
+		</div>
+		<% } %>
+		<% if (logged_user) { %>
+			<% include messenger.html %>
+		<% } %>
+	</ul>
+</nav>

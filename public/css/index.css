@@ -1,0 +1,205 @@
+html {
+	height: 100%;
+}
+body {
+	background-color: #e6e6e6;
+	height: 100%;
+}
+
+
+.card {
+	position: relative;
+	float: left;
+	margin: 20px;
+	top: 50px;
+	width: 340px;
+	height: 495px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile_picture {
+	position: relative;
+	width: 100%;
+	height: 340px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.profile_picture .name {
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	color: white;
+	font-size: 24pt;
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 80%;
+}
+
+.profile_picture .age {
+	position: absolute;
+	bottom: 0;
+	right: 10px;
+	color: white;
+	font-size: 24pt;
+	margin-left: 10px;
+
+}
+
+.profile_details .tags {
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    max-width: 100%;
+}
+
+.profile_details {
+	position: relative;
+	padding: 10px;
+	height: 155px;
+	background-color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.profile_details .fas {
+	margin-right: 10px;
+}
+.profile_details .fa-map-marker-alt {
+	margin-left: 3px;
+	margin-right: 12px;
+}
+.profile_details .fa-briefcase {
+	margin-left: 2px;
+	margin-right: 12px;
+}
+
+.like {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #ff1595;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.like:hover {
+	cursor: pointer;
+}
+
+.dislike:hover {
+	cursor: pointer;
+}
+
+.like .fas {
+	position: absolute;
+	bottom: 17px;
+	right: 8px;
+}
+
+.dislike {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #cccccc;
+	color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.dislike .fas {
+	position: absolute;
+	bottom: 17px;
+	left: 20px;
+}
+
+.rating i {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+@media only screen and (max-width: 1199px)
+{
+	.chat_container {
+		width: 790px !important;
+	}
+}
+
+@media only screen and  (max-width: 859px)
+{
+	.card {
+		margin: 15px;
+	}
+	.chat_container {
+		width: 770px !important;
+	}
+}
+@media only screen and  (max-width: 835px)
+{
+	.chat_container {
+		width: 360px !important;
+	}
+}
+
+@media only screen and  (max-width: 500px)
+{
+	.chat_container {
+		width: 100% !important;
+		padding-right: 13% !important;
+		padding-left: 13% !important;
+		padding-bottom: 37px !important;
+	}
+
+	.card {
+		width: 100%;
+		padding: 0px;
+		margin: 10px 0px;
+	}
+}
+
+@media only screen and  (max-width: 450px)
+{
+	.chat_container {
+		width: 100% !important;
+		padding-right: 7% !important;
+		padding-left: 7% !important;
+		padding-bottom: 37px !important;
+	}
+
+	.card {
+		width: 100%;
+		padding: 0px;
+		margin: 10px 0px;
+	}
+}
+
+@media only screen and  (max-width: 400px)
+{
+	.chat_container {
+		width: 100% !important;
+		padding-right: 10px !important;
+		padding-left: 10px !important;
+		padding-bottom: 37px !important;
+	}
+
+	.card {
+		width: 100%;
+		padding: 0px;
+		margin: 10px 0px;
+
+	}
+}

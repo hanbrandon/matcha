@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+}
+
+.profile_imgs {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register_form {
+    background-color: white;
+	border: 1px solid #e6e6e6;
+    margin-top: 50px;
+	height: 100%;
+	padding: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+}
+.interests a {
+    color: black;
+}
+
+.interests a:hover {
+    text-decoration: none;
+    color: gray;
+}
+.reg_inp,
+select,
+input[type=date] {
+    height: 36px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    text-indent: 10px;
+    margin-top: 10px !important;
+}
+
+.register_btn {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    background-image: linear-gradient(to right, #f50057, #ff6d00);
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    cursor: pointer;
+}
+
+.form-check {
+    text-align: center;
+}
+
+.form-check-label {
+    margin-left: 30px;
+}
+.interests span {
+    background: rgb(233, 233, 233);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 2px;
+
+}
+
+#interests {
+    margin-bottom: 10px;
+}
+
+@media only screen and  (max-width: 500px)
+{
+	.register_form {
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+        top: 50px;
+        left: 0;
+    }
+
+    .container {
+        padding: 0px !important;
+    }
+    
+}

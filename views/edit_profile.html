@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css/edit_profile.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../javascript/edit_profile.js"></script>
+</head>
+<body>
+    <% include nav.html %>
+    <div class="container">
+        <div class="register_form">
+                <h1>Edit Profile</h1>
+            <form action="/edit_profile" method="post">
+                <input type="hidden" name="firstlogin" value="<%= firstlogin %>">
+                <div class="form-group">
+                    <label for="firstName" class="control-label">First Name</label>
+                    <input id="firsttName" class="reg_inp form-control" name="firstName" required type="text"
+                        value="<%= firstname %>">
+                </div>
+                <div class="form-group">
+                    <label for="lastName" class="control-label">Last Name</label>
+                    <input id="lastName" class="reg_inp form-control" name="lastName" required type="text"
+                        value="<%= lastname %>">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label">Email</label>
+                    <input id="email" class="reg_inp form-control" name="email" required type="email"
+                        value="<%= email %>">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option selected disabled>Select Gender</option>
+                        <option value="male" <% if (gender == "male") {%>selected<% } %>>Male</option>
+                        <option value="female" <% if (gender == "female") {%>selected<% } %>>Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="bday">Date of Birth</label>
+                    <input type="date" name="bday" id="bday" value="<%= bday %>">
+                </div>
+                <div class="form-group">
+                    <label for="occpation" class="control-label">Occupation</label>
+                    <input id="occupation" class="reg_inp form-control" name="occupation" required type="text"
+                        value="<%= occupation %>">
+                </div>
+                <div class="form-group">
+                    <label for="school" class="control-label">School</label>
+                    <input id="school" class="reg_inp form-control" name="school" required type="text"
+                        value="<%= school %>">
+                </div>
+                <div class="form-group">
+                    <label for="sexual_preferences">Sexual preferences</label>
+                    <select multiple size="3" name="sexual_preferences" id="sexual_preferences" required>
+                        <option value="male" <% if (sexual_preferences == "male") {%>selected<% } %>>Male
+                        </option>
+                        <option value="female" <% if (sexual_preferences == "female") {%>selected<% } %>>Female
+                        </option>
+                        <option value="bisexual" <% if (sexual_preferences == "bisexual") {%>selected<% } %>>Bisexual
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interests">Interests</label>
+                    <input id="interests" class="autocomplete reg_inp form-control" type="text">
+                    <div class="interests">
+                        <% if (tagarr) {for(var i=1; i < tagarr.length + 1; i++) { %>
+                        <a href="#" id="atag<%= i %>" onclick="deletetag(<%= i %>)" ;return false;><span
+                                id="spantag<%= i %>" data-id="<%= i %>"><%= tagarr[i - 1] %></span></a>
+                        <% }} else var i=1;%>
+                        <input id="count_tag" type=hidden value="<%=i%>">
+                        <input id="tags" name="interests" type=hidden
+                            value="<% if (tagarr) {for(var i=0; i < tagarr.length; i++) { %>, <%= tagarr[i] %><% }} %>">
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkbox" name="notification"
+                        <% if (notification == 1) {%>checked<% } %>>
+                    <label class="form-check-label" for="checkbox">Email Notification</label>
+                </div>
+                <input class="register_btn" name="submit" type="submit" value="OK">
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>

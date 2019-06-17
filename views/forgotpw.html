@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
+</head>
+<body>
+    <% include nav.html %>
+    <div class="container">
+        <div class="login_form">
+            <form action="/forgotpw" method="post">
+                <div class="login_field">
+                    <h1>Forgot pw?</h1>
+                    <input class="log_inp" name="username_email" placeholder="Enter username or email" required type="text">
+                    <input class="login_btn" name="submit" type="submit" value="OK">
+                    <% if(error) { %>
+                        <span><%= error %></span>
+                    <% } %>
+                    <p><a href="/create">Register</a> | <a href="/login">Go back to login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+    </footer>
+</body>
+
+</html>
