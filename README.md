@@ -15,14 +15,45 @@ Live demo link: http://13.57.176.0:3000/
 
 ## Login :
 
-## Create :
+![Alt text](/readme/login.png)
+
+## Register :
+
+![Alt text](/readme/register.png)
+
+## Forgotpw : 
+
+![Alt text](/readme/forgotpw.png)
+
+## Edit Profile : 
+
+![Alt text](/readme/editprofile.gif)
+
+## Edit Profile Image :
+
+![Alt text](/readme/editprofileimg.png)
 
 ## Main :
 
+![Alt text](/readme/main.png)
+
 **Advanced Search**
+
+![Alt text](/readme/search.gif)
 
 **Like / Dislike**
 
+![Alt text](/readme/like_or_dislike.gif)
+
 ## User Profile :
 
+![Alt text](/readme/userprofile.png)
+
 ## Chat :
+
+![Alt text](/readme/Chat.gif)
+
+## Notification : 
+
+![Alt text](/readme/notification.gif)
+
