@@ -10,6 +10,8 @@ Back-end was done by Node.js, and we used MySQL for the database.
 Socket.io was used to implement chat and push notification system.
 
 Live demo link: http://13.57.176.0:3000/
+Username: test1
+Password: Asdf123$
 
 *Location feature does not function due to the security issue. (requires https)*
 
